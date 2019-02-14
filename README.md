@@ -17,14 +17,14 @@ The `Alignment` module requires the [Python 3 platform](https://www.python.org/d
 For example in Ubuntu,
 ```
 sudo apt-get update
-sudo apt-get install haskell-platform
+sudo apt-get install python3.7
 ```
 Then download the zip file or use git to get the repository -
 ```
 cd
-git clone https://github.com/caiks/Alignment.git
+git clone https://github.com/caiks/AlignmentPy.git
 ```
-Then use the Python installer tool `pip` to install [Sorted Containers](http://www.grantjenks.com/docs/sortedcontainers) and [NumPy and SciPy](https://www.scipy.org/),
+Then use the Python installer tool `pip` to install [Sorted Containers](http://www.grantjenks.com/docs/sortedcontainers) and [NumPy and SciPy](https://www.scipy.org/), 
 ```
 pip install numpy-1.15.2-cp37-none-win32.whl
 
