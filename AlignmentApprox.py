@@ -1,16 +1,5 @@
 ﻿from Alignment import *
-from math import *
 from scipy.special import *
-
-# entropy :: [Rational] -> Double
-
-def entropy(ll):
-    if len(ll) == 0:
-        return 0
-    s = sum(ll)
-    if s <= 0:
-        return 0
-    return -sum([r/s * log(r/s) for r in ll])
 
 # histogramsEntropy :: Histogram -> Double
 

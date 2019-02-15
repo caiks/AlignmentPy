@@ -1,5 +1,6 @@
 ﻿from sortedcontainers import *
 from fractions import Fraction
+from math import *
 
 # cached hash collections are semi-frozen - ought to raise error on modification after hashing
 
@@ -533,3 +534,14 @@ def bell(n):
     if n == 1:
         return 1
     return sum([stirlingSecond(n,k) for k in range(1,n+1)])
+
+# entropy :: [Rational] -> Double
+
+def entropy(ll):
+    if len(ll) == 0:
+        return 0
+    s = sum(ll)
+    if s <= 0:
+        return 0
+    return -sum([r/s * log(r/s) for r in ll])
+
