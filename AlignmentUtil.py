@@ -253,6 +253,28 @@ def relationsDomain(ss):
 def relationsRange(ss):
     return sset([y for (x,y) in ss])
 
+# relationsSum :: (Ord a, Ord b, Num b) => Set.Set (a,b) -> b
+
+def relationsSum(qq):
+    return sum([y for (_,y) in qq])
+
+# relationsNormalise :: (Ord a, Ord b, Fractional b) => Set.Set (a,b) -> Set.Set (a,b)
+
+def relationsNormalise(qq):
+    s = relationsSum(qq)
+    return [(x,y/s) for (x,y) in qq]
+
+# functionsInverse :: (Ord a, Ord b) => Map.Map a b -> Map.Map b (Set.Set a)
+
+def functionsInverse(mm):
+    nn = sdict()
+    for (x,y) in mm.items():
+        if y not in nn:
+            nn[y] = sset()
+        nn[y] |= sset([x])
+    return nn
+
+
 # data Tree a = Tree (Map.Map a (Tree a))
 
 # emptyTree :: Tree a
@@ -511,4 +533,3 @@ def bell(n):
     if n == 1:
         return 1
     return sum([stirlingSecond(n,k) for k in range(1,n+1)])
-
