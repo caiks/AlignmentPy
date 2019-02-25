@@ -19,7 +19,8 @@ The `Alignment` module requires the [Python 3 platform](https://www.python.org/d
 For example in Ubuntu,
 ```
 sudo apt-get update
-sudo apt-get install python3.7
+sudo apt-get install python3.5
+sudo apt install python3-pip
 ```
 Then download the zip file or use git to get the repository -
 ```
@@ -28,11 +29,9 @@ git clone https://github.com/caiks/AlignmentPy.git
 ```
 Then use the Python installer tool `pip` to install [Sorted Containers](http://www.grantjenks.com/docs/sortedcontainers) and [NumPy and SciPy](https://www.scipy.org/), 
 ```
-pip install numpy-1.15.2-cp37-none-win32.whl
-
-pip install scipy-1.1.0-cp37-none-win32.whl
-
-pip install sortedcontainers-2.0.5-py2.py3-none-any.whl
+python3.5 -m pip install --user numpy
+python3.5 -m pip install --user scipy
+python3.5 -m pip install --user sortedcontainers
 ````
 
 ## Usage
@@ -40,7 +39,7 @@ pip install sortedcontainers-2.0.5-py2.py3-none-any.whl
 The Alignment modules are not optimised for performance and are mainly intended to allow experimentation in the Python interpreter. Load `AlignmentDev` to import the modules and define various useful abbreviated functions,
 ```
 cd AlignmentPy
-python
+python3
 ```
 ```py
 from AlignmentDev import *
