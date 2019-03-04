@@ -22,17 +22,18 @@ sudo apt-get update
 sudo apt-get install python3.5
 sudo apt install python3-pip
 ```
-Then download the zip file or use git to get the repository -
-```
-cd
-git clone https://github.com/caiks/AlignmentPy.git
-```
 Then use the Python installer tool `pip` to install [Sorted Containers](http://www.grantjenks.com/docs/sortedcontainers) and [NumPy and SciPy](https://www.scipy.org/), 
 ```
 python3.5 -m pip install --user numpy
 python3.5 -m pip install --user scipy
 python3.5 -m pip install --user sortedcontainers
-````
+```
+Then download the zip file or use git to get the repository -
+```
+cd
+git clone https://github.com/caiks/AlignmentPy.git
+```
+
 
 ## Usage
 
