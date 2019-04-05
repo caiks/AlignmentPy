@@ -1120,6 +1120,23 @@ def transformsVars(tt):
     (xx,ww) = tt
     return vars(xx) 
 
+# transformsMapVarsFrame :: Transform -> Map.Map Variable Variable -> Maybe Transform
+
+def transformsMapVarsFrame(tt,nn):
+    hframe = histogramsMapVarsFrame
+    trans = histogramsSetVarsTransform
+    (aa,ww) = tt
+    bb = hframe(aa,nn)
+    if bb is None:
+        return None
+    xx = sset()
+    for v in ww:
+        if v in nn:
+            xx.add(nn[v])
+        else:
+            xx.add(v)
+    return trans(bb,xx)
+
 # transformsIsFunc :: Transform -> Bool
 
 def transformsIsFunc(tt):
