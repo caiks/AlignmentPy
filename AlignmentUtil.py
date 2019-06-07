@@ -2,6 +2,10 @@
 from fractions import Fraction
 from math import *
 
+class hlist(list):
+    def __hash__(self):
+        return 0
+
 # cached hash collections are semi-frozen - ought to raise error on modification after hashing
 
 class slist(list):
