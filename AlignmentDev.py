@@ -116,6 +116,7 @@ def dfapply(aa,df):
     return decompFudsHistogramsApply(df,aa)
 def dfmul(aa,df):
     return decompFudsHistogramsMultiply(df,aa)
+dfnul = systemsDecompFudsNullablePracticable
 
 ent = histogramsEntropy 
 def lent(aa,ww,vvl):
