@@ -110,6 +110,10 @@ fsys = fudsSystemImplied
 
 zzdf = treePairStateFudsDecompFud
 dfzz = decompFudsTreePairStateFud
+def dfll(df):
+    return treesPaths(dfzz(df))
+def lldf(ll):
+    return zzdf(pathsTree(ll))
 dfff = decompFudsFud
 dfund = decompFudsUnderlying
 def dfapply(aa,df):
