@@ -1363,6 +1363,18 @@ def fudsDerived_1(ff):
 # fudsSystemImplied :: Fud -> System
 
 def fudsSystemImplied(ff):
+    vars = histogramsSetVar
+    uu = sdict()
+    for (aa,_) in ff:
+        for v in vars(aa):
+            ww = sset([ss[v] for ss in aa.keys()])
+            if v in uu:
+                uu[v] |= ww
+            else:
+                uu[v] = ww
+    return uu
+
+def fudsSystemImplied_1(ff):
     sys = histogramsSystemImplied
     his = fudsSetHistogram
     empty = systemEmpty
