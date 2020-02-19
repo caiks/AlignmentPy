@@ -12,7 +12,7 @@ Some of the sections of the Overview of the paper have been illustrated with a [
 For programmers who are interested in implementing *inducers*, some of the sections of the paper have been expanded in a [Python commentary](https://greenlake.co.uk/pages/inducer_python) with links to documentation of the code in the repository. The code documentation is gathered together in [Python code](https://greenlake.co.uk/pages/inducer_python_implementation). 
 -->
 
-## Installation
+## Download
 
 The `Alignment` module requires the [Python 3 platform](https://www.python.org/downloads/) to be installed.
 
